@@ -1,10 +1,6 @@
 /*
  * filename: TreeMapExercise.java
  * author: Ashya
- * prompt: given a sentence input by the user, convert to lowercase, strip
- * punctuation, split into words. use a TreeMap<String, Integers> to
- * count word frequency. display each word and its frequency 
- * sorted alphabetically 
  */
 
  import java.util.TreeMap;
@@ -19,7 +15,7 @@
         System.out.println("Please enter a sentence: ");
         String text = scanner.nextLine();
         scanner.close();
-        
+
         text = text.replace(".", "");
         text = text.replace(",", "");
         text = text.toLowerCase();
