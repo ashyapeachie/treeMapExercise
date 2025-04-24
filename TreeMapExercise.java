@@ -8,35 +8,35 @@
  */
 
  import java.util.TreeMap;
+ import java.util.Scanner;
 
  public class TreeMapExercise {
      public static void main (String[] args) {
-         System.out.println("The Word Counter!");
-         String text = "And you might be the one to take away the pain, and let my mind go quiet";
-         // user input
+        System.out.println("The Word Counter!");
+
+        Scanner scanner = new Scanner(System.in);
+        // getting user's input
+        System.out.println("Please enter a sentence: ");
+        String text = scanner.nextLine();
+        scanner.close();
+        
+        text = text.replace(".", "");
+        text = text.replace(",", "");
+        text = text.toLowerCase();
+        // remove punctuation and change to lowercase
+        String[] words = text.split(" ");
+         // split into words
  
-         text = text.replace(".", "");
-         text = text.replace(",", "");
-         text.toLowerCase();
-         // remove punctuation and change to lowercase
-         String[] words = text.split(" ");
- 
-         var wordMap = new TreeMap<String,Integer>();
-         int count;
+        TreeMap<String, Integer> wordMap = new TreeMap<>();
+        // creating the map
  
          for (String word : words) {
-             if (wordMap.containsKey(word)) {
-                 count = wordMap.get(word);
-                 count++;
-                 wordMap.put(word, count);
-             } else {
-                 wordMap.put(word, 1);
-                 // new word
-             }
- 
-             for (var entry : wordMap.entrySet()) {
-                 System.out.println(entry.getKey() + ": " + entry.getValue());
-             }
+            wordMap.put(word, wordMap.getOrDefault(word, 0) + 1);
          }
+         // word count frequency
+
+         for (var entry : wordMap.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
      }
  }
