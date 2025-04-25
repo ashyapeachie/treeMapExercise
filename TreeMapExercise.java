@@ -40,6 +40,7 @@
             System.out.println("Would you like to enter another sentence?");
             String choice = scanner.nextLine().trim().toLowerCase();
             runAgain = choice.startsWith("y");
+            // wanting to change this part above
 
             if (!runAgain) {
                 System.out.println("thank you, see you later!");
