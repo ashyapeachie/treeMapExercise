@@ -1,6 +1,7 @@
 /*
- * filename: TreeMapExercise.java
  * author: Ashya
+ * filename: TreeMapExercise.java
+ * description: 
  */
 
  import java.util.TreeMap;
@@ -8,7 +9,7 @@
 
  public class TreeMapExercise {
      public static void main (String[] args) {
-        System.out.println("Welcome to my word counter!");
+        System.out.println("\n --- Welcome to my word counter! ---");
 
         Scanner scanner = new Scanner(System.in);
 
@@ -43,7 +44,7 @@
             // wanting to change this part above
 
             if (!runAgain) {
-                System.out.println("thank you, see you later!");
+                System.out.println("Thank you, see you later!");
             }
             // asking if the user wants to use the program again
         }
